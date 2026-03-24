@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 349 294" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-271.787573,-215.248923)">
+        <g id="Artboard2" transform="matrix(0.702078,0,0,0.526708,71.028721,247.951544)">
+            <rect x="285.949" y="-62.089" width="496.649" height="557.339" style="fill:none;"/>
+            <clipPath id="_clip1">
+                <rect x="285.949" y="-62.089" width="496.649" height="557.339"/>
+            </clipPath>
+            <g clip-path="url(#_clip1)">
+                <g transform="matrix(1.424343,0,0,1.898586,-1685.74144,-690.810458)">
+                    <g transform="matrix(0.980825,0,0,0.980825,293.409448,-509.109158)">
+                        <g transform="matrix(407.820027,0,0,407.820027,2424.60612,1151.999956)">
+                        </g>
+                        <text x="1100.848px" y="1152px" style="font-family:'OpenSansCondensed-ExtraBold', 'Open Sans Condensed';font-weight:800;font-stretch:condensed;font-size:407.82px;fill:rgb(127,127,127);">S<tspan x="1279.922px 1465.966px 1640.461px 1859.361px 2027.882px 2202.376px " y="1152px 1152px 1152px 1152px 1152px 1152px ">ZEKLER</tspan></text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
