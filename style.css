@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("light.css");
 
 * {
     padding: 0;
@@ -8,6 +9,7 @@
     font-family: "Jost", sans-serif;
     text-decoration: none;
     list-style: none;
+    transition: all .50s ease;
 }
 
 :root {
@@ -23,7 +25,7 @@ body {
 header {
     display: flex;
     background-color: var(--bg-color);
-    justify-content: space-evenly;
+    justify-content: space-between;
     padding: 2rem 12%;
 
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.0), rgba(255, 255, 255, 0.25));
@@ -32,9 +34,18 @@ header {
     border-radius: 0px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: all .50s ease;
 }
 
-.item {
+.item1 {
+    flex-grow: 0.5;
+    /* background-color: red; */
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+}
+
+.item2 {
     flex-grow: 0.5;
     /* background-color: red; */
     width: 3rem;
@@ -52,6 +63,7 @@ header {
 
 .navbar {
     display: flex;
+    align-items: center;
 }
 
 .navbar li > a {
@@ -105,21 +117,156 @@ header {
     } */
 }
 
-@media (max-width: 750px){
+.main {
+    display: flex;
+    align-items: center;
+}
+
+.main a {
+    margin-right: 25px;
+    margin-left: 10px;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all .50sec ease;
+
+    &:hover {
+        color: var(--main-color);
+    }
+}
+
+.lang {
+    display: flex;
+    align-items: center;
+    transition: all .50s ease;
+}
+
+.lang i {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    margin-right: 7px;
+    transition: all .50sec ease;
+
+}
+
+.lang-mob {
+    display: none;
+    transition: all .50s ease;
+}
+
+.mode {
+    display: flex;
+    align-items: center;
+    transition: all .50s ease;
+}
+
+.mode i {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    margin-right: 7px;
+    transition: all .50s ease;
+}
+
+.mode-mob {
+    display: none;
+    transition: all .50s ease;
+}
+
+#menu-icon {
+    font-size: 35px;
+    color: var(--main-color);
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+    transition: all .50s ease;
+}
+
+#menu-icon > i {
+    transform: rotateX(180deg);
+    font-size: 500;
+}
+
+@media (max-width: 1090px){
     /* .logo {
         display: flex; 
         justify-content: center;
         align-items: center;
     } */
 
-    header {
+    /* header {
         justify-content: center;
-    }
-    .item {
+    } */
+    .item1 {
         flex-grow: 0;
         background-color: transparent;
     }
-    #nav {
+    .item2 {
+        flex-grow: 1;
+        background-color: transparent;
+    }
+    #menu-icon {
+        display: block;
+        transition: all .50s ease;
+    }
+    /* #nav {
+        display: flex;
+        
+    } */
+    .navbar {
+        display: block;
+        position: absolute;
+        top: 110%;
+        width: 50%;
+        right: -100%;
+        height: 1;
+
+        background: linear-gradient(45deg, rgba(255, 255, 255, 0.0), rgba(255, 255, 255, 0.25));
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border-radius: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        transition: all .50s ease;
+
+    }
+
+    .navbar a {
+        display: block;
+        margin: 12px 0;
+        padding: 0px 20px;
+        transition: all .50s ease;
+    }
+    .navbar.open {
+        display: block;
+        right: 2%;
+        transition: all .50s ease;
+    }
+
+    .lang {
         display: none;
+    }
+
+    .lang-mob {
+        display: flex;
+        align-items: center;
+    }
+    
+    .lang-mob i {
+        color: var(--main-color);
+        font-size: 1.5rem;
+        margin-right: 2px;
+    }
+    .mode {
+        display: none;
+    }
+    .mode-mob {
+        display: flex;
+        align-items: center;
+    }
+    
+    .mode-mob i {
+        color: var(--main-color);
+        font-size: 1.5rem;
+        margin-right: 2px;
     }
 }
