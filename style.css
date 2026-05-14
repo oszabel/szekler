@@ -291,23 +291,6 @@ header {
 
 
 @media (max-width: 1090px){
-    /* .logo {
-        display: flex; 
-        justify-content: center;
-        align-items: center;
-    } */
-
-    /* header {
-        justify-content: center;
-    } */
-    .item1 {
-        flex-grow: 0;
-        background-color: transparent;
-    }
-    .item2 {
-        flex-grow: 1;
-        background-color: transparent;
-    }
     #menu-icon {
         display: block;
         transition: all .50s ease;
@@ -372,5 +355,19 @@ header {
         color: var(--icon-color);
         font-size: 1.5rem;
         margin-right: 2px;
+    }
+}
+
+@media (max-width: 850px){
+    .hero {
+        min-height: 450px;
+        height: auto;
+
+        padding: 4rem 0;
+    }
+
+    .hero-video,
+    .hero::before {
+        height: 100%;
     }
 }
