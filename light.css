@@ -1,4 +1,4 @@
-:root {
+/* :root {
     --bg-lightmode: #e5e5e5;
     --text-lightmode: #222327;
     --main-lightmode: #7E7E7E;
@@ -12,6 +12,17 @@
 
 .lightmode header .navbar li > a {
     color: var(--main-lightmode);
+
+    position: relative;
+    font-size: 1.1rem;
+    font-weight: 500;
+    /* padding: 5px 0; */
+    /* margin: 0px 30px; 
+    margin-right: 25px;
+    margin-left: 10px;
+    transition: all .50s ease;
+    padding-bottom: 5px;
+
     &::before {
         content: ""; 
         position: absolute;
@@ -19,7 +30,7 @@
         height: 2px;
         bottom: 2px;
         left: 0;
-        background-color: var(--text-lightmoder);
+        background-color: var(--text-lightmode);
         visibility: hidden;
         -webkit-transform: scaleX(0);
         transform: scaleX(0);
@@ -40,15 +51,27 @@
     }
 }
 
-.lightmode header .main a {
-    color: var(--text-lightmode);
+.lightmode header .main {
+    color: var(--main-lightmode);
     &:hover {
         color: var(--text-lightmode);
     }
 }
 
 @media (max-width: 1090px){
-    .lightmode header .main .lang-mob > i{
-        color: var(--text-lightmode);
+    .lightmode header .main a i {
+        color: var(--main-lightmode);
     }
-}
+    
+    /* .lightmode header .main .lang-mob > i{
+        color: var(--main-lightmode);
+    }
+
+    .lightmode header .main .mode-mob > i{
+        color: var(--main-lightmode);
+    }
+    
+    .lightmode header .main #menu-icon > i{
+        color: var(--main-lightmode);
+    } 
+} */

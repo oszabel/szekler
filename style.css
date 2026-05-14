@@ -16,6 +16,14 @@
     --bg-color: #222327;
     --text-color: #7E7E7E;
     --main-color: #e5e5e5;
+    --icon-color: #e5e5e5;
+    
+}
+
+.lightmode {
+    --bg-color: #e5e5e5;
+    --main-color: #222327;
+    --icon-color: #7E7E7E;
 }
 
 body {
@@ -83,7 +91,7 @@ header {
         position: absolute;
         width: 100%;
         height: 2px;
-        bottom: 2px;
+        bottom: 0px;
         left: 0;
         background-color: var(--main-color);
         visibility: hidden;
@@ -174,7 +182,7 @@ header {
 
 #menu-icon {
     font-size: 35px;
-    color: var(--main-color);
+    color: var(--icon-color);
     cursor: pointer;
     z-index: 10001;
     display: none;
@@ -252,7 +260,7 @@ header {
     }
     
     .lang-mob i {
-        color: var(--main-color);
+        color: var(--icon-color);
         font-size: 1.5rem;
         margin-right: 2px;
     }
@@ -265,7 +273,7 @@ header {
     }
     
     .mode-mob i {
-        color: var(--main-color);
+        color: var(--icon-color);
         font-size: 1.5rem;
         margin-right: 2px;
     }
