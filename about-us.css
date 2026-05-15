@@ -41,6 +41,14 @@ article,
 }
 
 .szekler-article {
+    /* background: linear-gradient(175deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.05)); */
+    padding: 3rem;
+    /* box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid var(--main-color);
+    border-top: 1px solid var(--main-color); */
+}
+
+.mission-article {
     background: linear-gradient(175deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.05));
     padding: 3rem;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
@@ -53,9 +61,9 @@ article b {
 }
 
 .equipment-section {
-    padding-bottom: 0rem;
-    border-top: 1px solid var(--main-color);
-    /* background: linear-gradient(175deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.05));
+    padding-bottom: 1rem;
+    /* border-top: 1px solid var(--main-color);
+    background: linear-gradient(175deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.05));
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2); */
 }
 
@@ -63,6 +71,11 @@ article b {
     display: flex;
     justify-content: center;
     padding: 5rem 20px;
+
+    background: linear-gradient(175deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.05));
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid var(--main-color);
+    border-top: 1px solid var(--main-color);
 }
 
 .milestones-container {
@@ -139,17 +152,17 @@ article b {
 .timeline-content h3 {
     color: var(--main-color);
     font-size: 1.4rem;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .timeline-content .highlight {
     color: var(--text-color);
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .timeline-content p {
-    color: var(--text-color);
+    color: var(--main-color);
     font-size: 1rem;
     line-height: 1.5;
     padding: 10px 15px;
@@ -158,9 +171,13 @@ article b {
     display: inline-block;
     margin-top: 10px;
 
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.05));
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.12));
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
     border-right: 2px solid rgba(255, 255, 255, 0.05);
     border-top: 2px solid rgba(255, 255, 255, 0.05);
     border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+}
+
+.timeline-content p i {
+    color: var(--main-color);
 }
