@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 @import url("index.css");
+@import url("contact-us.css");
 
 * {
     padding: 0;
@@ -12,8 +13,18 @@
     transition: all .50s ease;
 }
 
-html {
-    overflow-x: hidden;
+html, body {
+    overflow-x: clip;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
 }
 
 :root {
@@ -222,6 +233,8 @@ footer {
     -webkit-backdrop-filter: blur(15px);
     border-radius: 0px;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+    width: 100%;
 }
 
 .footer-content {
@@ -230,6 +243,8 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    width: 100%;
 }
 
 .footer-left {

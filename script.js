@@ -64,3 +64,35 @@ if(menu) {
         if(header) header.classList.toggle('open');
     }
 }
+
+const submitBtn = document.querySelector('#submit-btn');
+
+if(submitBtn) {
+    submitBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const movie = document.getElementById('movie-title').value;
+
+        const rating = document.querySelector('input[name="rate-radio"]:checked')?.value || "Nincs megadva";
+
+        const opinion = document.getElementById('opinion').value;
+        const newsletter = document.getElementById('newsletter-toggle').checked ? "Igen" : "Nem";
+
+        const recipient = "osz.abel@gmail.com"
+        const subject = encodeURIComponent("Film értékelés • Szekler Pictures");
+
+        const bodyText = `Szia! Új értékelés érkezett a weboldalról:\n\n` +
+                         `Név: ${name}\n` +
+                         `E-mail: ${email}\n` +
+                         `Film címe: ${movie}\n` +
+                         `Értékelés: ${rating}/5\n` +
+                         `Hírlevél feliratkozás: ${newsletter}\n\n` +
+                         `Vélemény:\n${opinion}`;
+
+        const body = encodeURIComponent(bodyText);
+
+        window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+    });
+}

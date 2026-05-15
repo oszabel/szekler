@@ -5,27 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
-    <link rel="website icon" type="webp" href="media/favicon.webp">
+    <link rel="website icon" type="webp" href="../../media/favicon.webp">
     <link rel="stylesheet" href="../../style.css">
     <title>Kapcsolat • Szekler Pictures</title>
 </head>
 <body class="">
     <header class="header">
-        
-        <!-- <div class="logo"><a href="./"><img src="media/logos/logo.webp" alt="Szekler Pictures logo"></a></div>
-        <ul class="navbar">
-            <li><a href="./" class="active">Kezdőlap</a></li>
-            <li><a href="movies/">Filmek</a></li>
-            <!-- <div class="logo"><a href="./"><img src="media/logos/logo.webp" alt="Szekler Pictures logo" onmouseover="this.src='media/logos/logo-white.webp';" onmouseout="this.src='media/logos/logo.webp';"></a></div> --
-
-            <li><a href="about-us/">Rólunk</a></li>
-            <li><a href="contact-us/">Kapcsolat</a></li>
-        </ul>
-
-        <div class="main">
-
-        </div> -->
-
         <div class="" id="logo">
             <div class="center-vertically">
                 <a href="#" class="logo"><img src="../../media/logos/logo.webp" alt="Szekler Pictures"></a>
@@ -34,7 +19,7 @@
 
         <ul class="navbar">
             <li><a href="../">Kezdőlap</a></li>
-            <li><a href="../movies/">Filmek</a></li>
+            <li><a href="../films/">Filmek</a></li>
             <li><a href="../about-us/">Rólunk</a></li>
             <li><a href="#" class="active">Kapcsolat</a></li>
         </ul>
@@ -42,13 +27,111 @@
         <div class="main">
             <a href="#" class="mode" id="light"><i class="ri-sun-fill"></i>Light mode</a>
             <a href="#" class="mode-mob"><i class="ri-sun-fill"></i></a>
-            <a href="../../en/" class="lang" id="lang"><i class="ri-earth-fill"></i>English</a>
-            <a href="../../en/" class="lang-mob"><i class="ri-earth-fill"></i></a>
+            <a href="../../en/contact-us/" class="lang" id="lang"><i class="ri-earth-fill"></i>English</a>
+            <a href="../../en/contact-us/" class="lang-mob"><i class="ri-earth-fill"></i></a>
             <div class="bx-menu" id="menu-icon"><i class="ri-menu-line"></i></div>
         </div>
     </header>
 
+    <main class="main-form">
+        <section class="stay-in-touch">
+            <h3>Maradj velünk kapcsolatban!</h3>
+            <p>Értékelj minket! Mondd el, hogy tetszett neked filmeink. Fontos számunkra a vélemények, mert azokból tanulva tudunk jobbnál jobb kávészünetnyi hosszúságú filmecskéket gyártani.</p>
+        </section>
+
+        <form class="form">
+            <fieldset class="personal-info">
+                <legend>Saját adatok</legend>
+                <div class="input-group">
+                    <label for="name"><i>Név</i></label><br>
+                    <input type="text" id="name" size="50" name="name-hu" placeholder="Kiss Károly"><br>
+                </div>
+                
+                <div class="input-group">
+                    <label for="email"><i>E-mail cím</i></label><br>
+                    <input type="email" id="email" size="50" name="email" placeholder="email@szekler.hu"><br>
+                </div>
+            </fieldset>
+                
+            <fieldset class="rating">
+                <legend>Értékelés</legend>
+                <div class="input-group">
+                    <label for="movie-title"><i>Film címe</i></label><br>
+                    <input type="text" id="movie-title" size="50" name="movie-title" placeholder="Oblivion"><br>
+                </div>
+
+                <div class="input-group">
+                    <label for=""><i>Hogyan tetszett? Értékeld 5-ös skálán!</i></label><br>
+                    <div class="radio-group">
+                        <input type="radio" name="rate-radio" value="1" id="cs1">
+                        <label for="cs1">1</label>
+                        <input type="radio" name="rate-radio" value="2" id="cs2">
+                        <label for="cs2">2</label>
+                        <input type="radio" name="rate-radio" value="3" id="cs3">
+                        <label for="cs3">3</label>
+                        <input type="radio" name="rate-radio" value="4" id="cs4">
+                        <label for="cs4">4</label>
+                        <input type="radio" name="rate-radio" value="5" id="cs5">
+                        <label for="cs5">5</label>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="opinion"><i>Miért gondolod így?</i></label><br>
+    				<textarea name="opinion" id="opinion"></textarea>
+                </div>
+            </fieldset>
+        </form>
+
+        <section class="submit">
+            <label class="toggle-switch">
+                <div class="switch">
+                    <input type="checkbox" id="newsletter-toggle">
+                    <span class="slider"></span>
+                </div>
+                <span class="newsletter-label">Fel szeretnék iratkozni a <i>Szekler Pictures</i> hírlevelére.</span>
+            </label>
+            <button class="btn" type="submit" id="submit-btn">Elküldés</button>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <p>Szekler Pictures • 2026</p>
+            </div>
     
+            <div class="footer-right">
+                <div class="footer-menu">
+                    <nav>
+                        <ul>
+                            <li><a href="#" class="footer-active">Főoldal</a></li>
+                            <li><a href="films/">Filmek</a></li>
+                            <li><a href="about-us/">Rólunk</a></li>
+                            <li><a href="contact-us/">Kapcsolat</a></li>
+                        </ul>
+                    </nav>
+                </div>
+        
+                <div class="tools">
+                    <label class="toggle-switch">
+                        <span class="toggle-label">Kontrasztos mód</span>
+                        <div class="switch">
+                            <input type="checkbox" id="contrast-toggle">
+                            <span class="slider"></span>
+                        </div>
+                    </label>
+                    <label class="toggle-switch">
+                        <span class="toggle-label">Nagybetűs mód</span>
+                        <div class="switch">
+                            <input type="checkbox" id="contrast-toggle">
+                            <span class="slider"></span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="../../script.js"></script>
 </body>

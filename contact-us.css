@@ -1,0 +1,188 @@
+.stay-in-touch {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    min-height: 20vh;
+    overflow: hidden;
+
+    position: relative;
+    
+    padding: 0 20px;
+    margin: 2rem 0;
+}
+
+.stay-in-touch h3 {
+    color: var(--main-color);
+    font-size: clamp(1.5rem, 5vw, 2rem); 
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.stay-in-touch p {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.6;
+    max-width: 800px;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 20px;
+    gap: 4rem;
+    align-items: flex-start;
+}
+
+fieldset {
+    flex: 1;
+    border: none;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.05));
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+legend {
+    font-size: 1.5rem;
+    color: var(--main-color);
+    font-weight: 600;
+    padding: 0 1rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.input-group label {
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form textarea {
+    width: 100%;
+    padding: 15px 20px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.05));
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    color: var(--main-color);
+    font-size: 1rem;
+    font-family: inherit;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form input[type="text"]:focus,
+.form input[type="email"]:focus,
+.form textarea:focus {
+    border-color: var(--main-color);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.1));
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+.form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.radio-group {
+    display: flex;
+    gap: 15px;
+}
+
+.radio-group input[type="radio"] {
+    display: none;
+}
+
+.radio-group label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.radio-group label:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--main-color);
+}
+
+.radio-group input[type="radio"]:checked + label {
+    background: var(--main-color);
+    color: var(--bg-color);
+    border-color: var(--main-color);
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.submit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    margin-bottom: 5rem;
+}
+
+.newsletter-label {
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+.submit .btn {
+    padding: 15px 40px;
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    border: 2px solid var(--main-color);
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.4s ease;
+
+    &:hover {
+        background-color: transparent;
+        color: var(--main-color);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+}
+
+@media (max-width: 900px){
+    .form {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+    
+    fieldset {
+        padding: 2rem 1.5rem;
+    }
+
+    .radio-group {
+        justify-content: space-between;
+    }
+}
