@@ -236,5 +236,6 @@ figcaption {
     }
     .button {
         padding-bottom: 0;
+        align-items: center;
     }
 }
