@@ -230,8 +230,7 @@ figcaption {
 
 @media (max-width: 900px) {
     .newest,
-    .anonymous,
-    .button {
+    .anonymous {
         flex-direction: column;
         gap: 3rem;
     }
