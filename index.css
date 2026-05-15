@@ -73,8 +73,7 @@
 
 .featured {
     position: relative;
-    display: flex;
-    margin: auto;
+    width: 100%;
     padding: 0;
     border-bottom: 2px solid var(--main-color);
     
