@@ -12,6 +12,10 @@
     transition: all .50s ease;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 :root {
     --bg-color: #222327;
     --text-color: #7E7E7E;
@@ -353,7 +357,7 @@ input:checked + .slider:before {
         display: block;
         position: absolute;
         top: 120%;
-        width: 33%;
+        width: 50%;
         height: max-content;
         right: -100%;
 
@@ -365,7 +369,9 @@ input:checked + .slider:before {
         box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
         transition: all .50s ease;
 
-        z-index: 10;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
     }
 
     .navbar li > a {
@@ -382,6 +388,9 @@ input:checked + .slider:before {
         display: block;
         right: 2%;
         transition: all .50s ease;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
     }
 
     .lang {
