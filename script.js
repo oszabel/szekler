@@ -7,7 +7,9 @@ let lightMobile = document.querySelector('.mode-mob');
 let savedMode = localStorage.getItem("light");
 
 if(savedMode != null && savedMode != ""){
-    body.classList = savedMode;
+    if (savedMode.includes("lightmode")) {
+        body.classList.add("lightmode");
+    }
 }
 else {
     const prefersLightMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
@@ -39,7 +41,7 @@ if(light){
     light.addEventListener('click', function(e) {
         e.preventDefault();
         body.classList.toggle('lightmode');
-        localStorage.setItem("light", body.classList);
+        localStorage.setItem("light", body.classList.contains('lightmode') ? "lightmode" : "darkmode");
         updateModeButtons();
     });
 }
@@ -48,7 +50,7 @@ if(lightMobile){
     lightMobile.addEventListener('click', function(e) {
         e.preventDefault();
         body.classList.toggle('lightmode');
-        localStorage.setItem("light", body.classList);
+        localStorage.setItem("light", body.classList.contains('lightmode') ? "lightmode" : "darkmode");
         updateModeButtons();
     });
 }
@@ -94,5 +96,44 @@ if(submitBtn) {
         const body = encodeURIComponent(bodyText);
 
         window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+    });
+}
+
+const contrastToggle = document.getElementById('contrast-toggle');
+const largeTextToggle = document.getElementById('text-toggle');
+
+if(localStorage.getItem('contrastMode') === 'true') {
+    document.body.classList.add('contrast-mode');
+    if(contrastToggle) contrastToggle.checked = true;
+}
+
+if(localStorage.getItem('largeTextMode') === 'true') {
+    document.body.classList.add('large-text-mode');
+    if(largeTextToggle) largeTextToggle.checked = true;
+}
+
+if(contrastToggle) {
+    contrastToggle.addEventListener('change', function() {
+        if(this.checked) {
+            document.body.classList.add('contrast-mode');
+            localStorage.setItem('contrastMode', 'true');
+        }
+        else {
+            document.body.classList.remove('contrast-mode');
+            localStorage.setItem('contrastMode', 'false');
+        }
+    });
+}
+
+if(largeTextToggle) {
+    largeTextToggle.addEventListener('change', function() {
+        if(this.checked) {
+            document.body.classList.add('large-text-mode');
+            localStorage.setItem('largeTextMode', 'true');
+        }
+        else {
+            document.body.classList.remove('large-text-mode');
+            localStorage.setItem('largeTextMode', 'false');
+        }
     });
 }

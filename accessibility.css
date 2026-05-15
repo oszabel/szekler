@@ -1,0 +1,49 @@
+body.large-text-mode {
+    font-size: 120%; 
+}
+
+body.large-text-mode p,
+body.large-text-mode a,
+body.large-text-mode td,
+body.large-text-mode th,
+body.large-text-mode figcaption {
+    font-size: 1.3rem !important;
+}
+
+body.large-text-mode h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem) !important;
+}
+
+body.contrast-mode {
+    --bg-color: #000000 !important;
+    --text-color: #ffffff !important;
+    --main-color: #ffff00 !important;
+    --icon-color: #ffff00 !important;
+    --video-text: #ffff00 !important;
+    background-color: var(--bg-color) !important;
+}
+
+body.contrast-mode header::before,
+body.contrast-mode footer,
+body.contrast-mode table,
+body.contrast-mode fieldset,
+body.contrast-mode .anonymous-artist,
+body.contrast-mode .szekler-article,
+body.contrast-mode .timeline-content p {
+    background: #000000 !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow: none !important;
+    border: 2px solid #ffff00 !important;
+}
+
+body.contrast-mode .btn {
+    background-color: #ffff00 !important;
+    color: #000000 !important;
+    border: 2px solid #ffff00 !important;
+}
+
+body.contrast-mode .btn:hover {
+    background-color: #000000 !important;
+    color: #ffff00 !important;
+}

@@ -1,18 +1,11 @@
 .newest,
-.anonymous,
-.anonymous-desc {
+.anonymous {
     display: flex;
     max-width: 1200px;
     margin: 5rem auto;
     padding: 0 20px;
     align-items: center;
     gap: 4rem;
-}
-
-.anonymous-desc {
-    flex-direction: column;
-    padding-bottom: 1rem;
-    gap: 2rem;
 }
 
 .anonymous-artist {
@@ -32,6 +25,14 @@
     gap: 2rem;
 }
 
+.button {
+    display: flex;
+    justify-content: center;
+    margin-top: -2rem;
+    margin-bottom: 4rem;
+    width: 100%;
+}
+
 .newest-left .title h2,
 .anonymous-right .title h2 {
     color: var(--main-color);
@@ -40,31 +41,39 @@
 }
 
 .newest-left .title p,
-.anonymous-right .title p,
-.anonymous-desc p {
+.anonymous-left p {
     color: var(--text-color);
     font-size: 1.2rem;
 }
 
-.anonymous-desc p {
+.anonymous-left p {
     text-align: justify;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.05));
-    /* border-radius: 12px; */
-    overflow: hidden;
+    background: linear-gradient(175deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.05));
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    /* border: 2px solid rgba(255, 255, 255, 0.07); */
+    overflow: hidden;
+}
+
+.lightmode table {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.lightmode table td,
+.lightmode table th {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 table td,
 table th {
     padding: 15px 20px;
     text-align: left;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.09);
 }
 
 table td {
@@ -114,7 +123,7 @@ figure {
 
 figure img {
     width: 100%;
-    max-width: 350px;
+    max-width: 300px;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease;
@@ -134,10 +143,99 @@ figcaption {
     font-style: italic;
 }
 
+.gallery-section {
+    max-width: 1200px;
+    margin: 5rem auto;
+    padding: 0 20px;
+}
+
+.gallery-section h2 {
+    color: var(--main-color);
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.gallery-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.film-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    aspect-ratio: 2 / 3;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(3px);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.card:hover .card-overlay {
+    opacity: 1;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card-overlay h3 {
+    color: var(--video-text);
+    font-size: 2rem;
+    text-align: center;
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+}
+
+.card-overlay .btn {
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+}
+
+.card .card-overlay h3,
+.card .card-overlay .btn {
+    transform: translateY(0);
+}
+
 @media (max-width: 900px) {
     .newest,
-    .anonymous {
+    .anonymous,
+    .button {
         flex-direction: column;
         gap: 3rem;
+    }
+    .button {
+        padding-bottom: 0;
     }
 }

@@ -3,6 +3,7 @@
 @import url("contact-us.css");
 @import url("about-us.css");
 @import url("films.css");
+@import url(accessibility.css);
 
 * {
     padding: 0;
@@ -331,11 +332,11 @@ footer {
         content: "";
         height: 14px;
         width: 14px;
-        left: 3px;
-        bottom: 3px;
+        left: 2px;
+        top: 2px;
         background-color: var(--text-color);
         border-radius: 50%;
-        transition: 0.5 ease-in-out;
+        transition: 0.5s ease-in-out;
     }
 }
 

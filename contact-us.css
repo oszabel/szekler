@@ -143,6 +143,9 @@ legend {
     align-items: center;
     gap: 2rem;
     margin-bottom: 1rem;
+
+    padding: 0 20px;
+    text-align: center;
 }
 
 .newsletter-label {
