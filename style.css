@@ -34,19 +34,33 @@ main {
 }
 
 :root {
-    --bg-color: #222327;
+    --bg-color: #000000;
+    --text-color: #707070;
+    --main-color: #ffffff;
+    --icon-color: #ffffff;
+    --video-text: #ffffff;
+    --mobile-menu: #b2b2b2;
+
+    /* EREDETI SZINEK */
+    /* --bg-color: #222327;
     --text-color: #7E7E7E;
     --main-color: #e5e5e5;
     --icon-color: #e5e5e5;
     --video-text: #e5e5e5;
-    --mobile-menu: #aeaeae;
+    --mobile-menu: #aeaeae; */
 }
 
 .lightmode {
     --bg-color: #e5e5e5;
+    --main-color: #000000;
+    --icon-color: #707070;
+    --mobile-menu: #707070;
+
+    /* EREDETI SZINEK */
+    /* --bg-color: #e5e5e5;
     --main-color: #222327;
     --icon-color: #7E7E7E;
-    --mobile-menu: #7E7E7E;
+    --mobile-menu: #7E7E7E; */
 }
 
 body {
@@ -185,7 +199,7 @@ header {
     color: var(--text-color);
     font-size: 1.1rem;
     font-weight: 500;
-    transition: all .50sec ease;
+    transition: all .50s ease;
 
     &:hover {
         color: var(--main-color);
@@ -202,7 +216,7 @@ header {
     color: var(--text-color);
     font-size: 1.1rem;
     margin-right: 7px;
-    transition: all .50sec ease;
+    transition: all .50s ease;
 
 }
 
